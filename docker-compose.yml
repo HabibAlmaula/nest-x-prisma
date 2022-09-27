@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  dev-db:
+    image: postgres:13
+    container_name: dev-db-nest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    ports:
+      - 5434:5432
+    networks:
+      - dev-network
+
+networks:
+    dev-network:
